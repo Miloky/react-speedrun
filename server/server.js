@@ -3,6 +3,8 @@ import bodyParser from 'body-parser';
 import express from 'express';
 import path from 'path';
 
+const winston = require('winston');
+
 const app = express();
 
 app.use(bodyParser.json());
@@ -14,7 +16,7 @@ const staticFiles = express.static(path.join(__dirname, '../../client/build'));
 app.use(staticFiles);
 
 router.get('/api', (req, res) => {
-  // console.log('Retrieved data from API');
+  winston.log('info', 'Retrieved data from API');
   res.json('Retrieved data from API');
 });
 
