@@ -1,0 +1,9 @@
+{
+  "extends": [
+      "eslint:recommended",
+      "airbnb-base"
+  ],
+  "rules": {
+     "no-set-state": "off"
+  }
+}

@@ -14,11 +14,15 @@
   },
   "devDependencies": {
     "babel-register": "^6.26.0",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
     "nodemon": "^1.12.0"
   },
   "scripts": {
     "build": "babel . --ignore node_modules,build --out-dir build",
-    "start": "nodemon -r dotenv/config -r babel-register server.js",
+    "lint": "eslint server.js",
+    "start": "npm run lint && nodemon -r dotenv/config -r babel-register server.js",
     "start:prod": "node -r dotenv/config build/server.js"
   }
 }
