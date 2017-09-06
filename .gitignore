@@ -56,4 +56,19 @@ typings/
 
 # dotenv environment variables file
 .env
+# dependencies
+node_modules
+
+# testing
+coverage
+
+# production
+build
+
+# misc
+.DS_Store
+.yarnclean
+npm-debug.log
+yarn-error.log
+*.rdb
 
