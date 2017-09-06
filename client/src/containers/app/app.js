@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 import Home from '../home/home';
 import Subheader from 'material-ui/Subheader';
-import {List, ListItem} from 'material-ui/List';
+import { List, ListItem } from 'material-ui/List';
 import './app.css';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import IconButton from 'material-ui/IconButton';
 import NavigationBack from 'material-ui/svg-icons/navigation/arrow-back';
-import {Toolbar, ToolbarGroup, ToolbarTitle} from 'material-ui/Toolbar';
+import { Toolbar, ToolbarGroup, ToolbarTitle } from 'material-ui/Toolbar';
 import Timestamp from '../backend/timestamp/timestamp';
 import Requestheader from '../backend/requestheader/requestheader';
 import UrlShortener from '../backend/urlshortener/urlshortener';
@@ -42,98 +42,62 @@ import Wiki from '../frontend/wiki/wiki';
 class App extends Component {
   state = { apiText: '', open: false };
 
-  handleToggle = () => this.setState({open: !this.state.open});
+  handleToggle = () => this.setState({ open: !this.state.open });
 
   render() {
     return (
       <div className="app">
-        
+
         <div className="app__header">
           <AppBar
-            
             title="React Speedrun"
-            onLeftIconButtonTouchTap={()=>{this.handleToggle()}}
+            onLeftIconButtonTouchTap={() => { this.handleToggle() }}
+            titleStyle="text-align: center"
           />
         </div>
 
         <div className="app__sidebar">
           <Drawer open={this.state.open}>
-
             <List>
-            <ListItem>
-              <IconButton onClick={() =>this.handleToggle()} >
-                <NavigationBack />
-              </IconButton>          
-            </ListItem>
-            <Subheader>Frontend Projects</Subheader>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/">Home</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/frontend/tribute-page">Tribute Page</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/frontend/random-quote-machine">Random Quote Machine</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/frontend/local-weather">Local Weather</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/frontend/wikipedia-viewer">Wikipedia Viewer</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/frontend/twitch-tv">Twitch.tv API</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/frontend/javascript-calulator">JavaScript Calculator</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/frontend/pomodoro-clock">Pomodoro Clock</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/frontend/tic-tac-toe">Tic Tac Toe</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/frontend/simon-game">Simon Game</Link></ListItem>
-
-            <Subheader>Data Visualzation Projects</Subheader>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/datavis/markdown-previewer">Markdown Previewer</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/datavis/camper-leaderboard">Camper Leaderboard</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/datavis/recipe-box">Recipe Box</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/datavis/game-of-life">Game of Life</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/datavis/roguelike">Roguelike Dungeon Crawler</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/datavis/bar-chart">Bar Chart</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/datavis/scatterplot-graph">Scatterplot Graph</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/datavis/heat-map">Heat Map</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/datavis/force-directed">Force Directed Graph</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/datavis/map-data">Map Data Across the Globe</Link></ListItem>
-            
-            <Subheader>Backend Projects</Subheader>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/backend/timesstamp-microservice">Timestamp Microservice</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/backend/request-microservice">Request Header Microservice</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/backend/url-microservice">URL Shortener Microservice</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/backend/image-search">Image Search Abstraction Layer</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/backend/file-metadata">File Metadata Microservice</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/backend/voting-app">Voting App</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/backend/nightlife-app">Nightlife Coordination</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/backend/stock-market">Stock Market</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/backend/book-club">Book Trading Club</Link></ListItem>
-
-            <ListItem><Link onClick={() =>this.handleToggle()} className="app__sidebar__link" to="/backend/pinterest-clone">Pinterest Clone</Link></ListItem>
-           
-
-              </List>
-
+              <ListItem>
+                <IconButton onClick={() => this.handleToggle()} >
+                  <NavigationBack />
+                </IconButton>
+              </ListItem>
+              <Subheader>Frontend Projects</Subheader>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/">Home</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/frontend/tribute-page">Tribute Page</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/frontend/random-quote-machine">Random Quote Machine</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/frontend/local-weather">Local Weather</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/frontend/wikipedia-viewer">Wikipedia Viewer</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/frontend/twitch-tv">Twitch.tv API</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/frontend/javascript-calulator">JavaScript Calculator</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/frontend/pomodoro-clock">Pomodoro Clock</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/frontend/tic-tac-toe">Tic Tac Toe</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/frontend/simon-game">Simon Game</Link></ListItem>
+              <Subheader>Data Visualzation Projects</Subheader>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/datavis/markdown-previewer">Markdown Previewer</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/datavis/camper-leaderboard">Camper Leaderboard</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/datavis/recipe-box">Recipe Box</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/datavis/game-of-life">Game of Life</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/datavis/roguelike">Roguelike Dungeon Crawler</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/datavis/bar-chart">Bar Chart</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/datavis/scatterplot-graph">Scatterplot Graph</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/datavis/heat-map">Heat Map</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/datavis/force-directed">Force Directed Graph</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/datavis/map-data">Map Data Across the Globe</Link></ListItem>
+              <Subheader>Backend Projects</Subheader>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/backend/timesstamp-microservice">Timestamp Microservice</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/backend/request-microservice">Request Header Microservice</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/backend/url-microservice">URL Shortener Microservice</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/backend/image-search">Image Search Abstraction Layer</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/backend/file-metadata">File Metadata Microservice</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/backend/voting-app">Voting App</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/backend/nightlife-app">Nightlife Coordination</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/backend/stock-market">Stock Market</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/backend/book-club">Book Trading Club</Link></ListItem>
+              <ListItem><Link onClick={() => this.handleToggle()} className="app__sidebar__link" to="/backend/pinterest-clone">Pinterest Clone</Link></ListItem>
+            </List>
           </Drawer>
         </div>
 
@@ -172,17 +136,15 @@ class App extends Component {
           </main>
         </div>
         <div className="app__footer">
-       
           <Toolbar>
             <ToolbarGroup>
-              <ToolbarTitle text="P1xt &copy; 2017" />  
+              <ToolbarTitle text="P1xt &copy; 2017" />
             </ToolbarGroup>
             <ToolbarGroup>
               <IconButton target="_blank" href="https://github.com/P1xt/react-speedrun" iconClassName="material-icon-custom-github" />
             </ToolbarGroup>
-          </Toolbar> 
+          </Toolbar>
         </div>
-
       </div>
     );
   }
