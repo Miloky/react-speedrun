@@ -2,12 +2,13 @@ import React from 'react';
 import { push } from 'react-router-redux';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import RaisedButton from 'material-ui/RaisedButton';
 
 const Home = props => (
   <div>
     <h1>Home</h1>
 
-    <p><button onClick={() => props.changePage()}>Go to about page via redux</button></p>
+    <p><RaisedButton onClick={() => props.changePage()} label="Go to about page via redux" /></p>
   </div>
 )
 
