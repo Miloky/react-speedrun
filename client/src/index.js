@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import store, { history } from './store';
-import App from './containers/app/app.jsx';
+import App from './containers/app/app';
 import './index.css';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {blueGrey600, blueGrey400, blueGrey800, orange800, blueGrey100, grey700, darkBlack, white, grey300, fullBlack} from 'material-ui/styles/colors';
