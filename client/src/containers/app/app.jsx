@@ -8,9 +8,8 @@ import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton';
 import NavigationBack from 'material-ui/svg-icons/navigation/arrow-back';
 import Divider from 'material-ui/Divider';
-import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
-import { withStyles } from 'material-ui/styles';
-import FontIcon from 'material-ui/FontIcon';
+import {Toolbar, ToolbarGroup, ToolbarTitle} from 'material-ui/Toolbar';
+
 class App extends Component {
   state = { apiText: '', open: false };
 
