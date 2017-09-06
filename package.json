@@ -1,0 +1,8 @@
+{
+  "name": "react-speedrun",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:P1xt/react-speedrun.git",
+  "author": "P1xt <kjphpdev@gmail.com>",
+  "license": "MIT"
+}
