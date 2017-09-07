@@ -12,7 +12,7 @@ Start date: 5 September 2017
 |      | N/A| [Comprehensive Portfolio as a Single Page App]() |   |
 |      |  [ ]()  | [Build a Tribute Page]() |  |
 |      |  [ ]()  | [Build a Personal Portfolio Webpage]() |  |
-|      |  [ ]()  | [Build a Random Quote Machine]() |  |
+|  9/6/2017    |  []()  | [Build a Random Quote Machine](http://p1xt-react-speedrun.herokuapp.com/frontend/random-quote-machine) |  |
 |      |  [ ]()  | [Show the Local Weather]() |  |
 |      |  [ ]()  | [Build a Wikipedia Viewer]() |  |
 |      |  [ ]()  | [Use the Twitch.tv JSON API]() |  |
