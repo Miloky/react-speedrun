@@ -1,0 +1,231 @@
+
+//**
+// Project Settings
+//**
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700|Lato:400,700);
+
+// Variables
+$br: 2px; 
+$btn-br: 2px; 
+$font-size: 100%; 
+$padding: 40px; 
+$line-height: 44px; 
+$system-font-stack:  Roboto, sans-serif;
+$primary-color: #049372;
+$secondary-color: #233e5b;
+$tertiary-color: #aaa;
+
+//**
+// Grid
+//**
+.container {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+}
+
+@for $i from 1 through 12 {
+  .col-xs-#{$i} {
+    grid-column-end: span $i;
+  } 
+}
+
+//**
+// Responsive classes
+//**
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      grid-column-end: span $i;
+    } 
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      grid-column-end: span $i;
+    } 
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      grid-column-end: span $i;
+    } 
+  }
+}
+
+
+//**
+// Typography
+//**
+
+body {
+  font-family: $system-font-stack;
+  font-size: $font-size;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+blockquote {
+  border-left: 2px solid $primary-color;
+  font-family: Times, "Times New Roman", serif;
+  font-size: 1.4em;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0 0 $padding/2;
+  padding-left: 25px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $system-font-stack;
+  margin: 0 0 25px;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+p {
+  margin: 0 0 $padding/2;
+}
+
+
+code {
+  border-radius: $br;
+  background: #f5f5f5;
+  border: 1px solid rgba(0, 0, 0, .1);
+  font-family:  "Courier New", monospace;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 2px 10px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+a {
+  color: $primary-color;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+//**
+// Element styles
+//**
+button {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  margin: 0;
+  min-width: 88px;
+  line-height: 36px;
+  padding: 0 $padding/2;
+  border-radius: $btn-br;
+  margin: 0 $padding/2 0 0;
+}
+.btn-primary {
+  background: $primary-color;
+  color: white;
+}
+.btn-secondary {
+  background: $secondary-color;
+  color: white;
+}
+.btn-tertiary {
+  background: $tertiary-color;
+  color: white;
+}
+
+//**
+// App Specific Styles
+//**
+.sidebar {
+  background: $primary-color;
+  color: white;
+  padding: 20px;
+  border-right: 1px #ccc;
+  -webkit-box-shadow: 6px 0px 2px -4px rgba(0,0,0,0.86);
+  -moz-box-shadow: 6px 0px 2px -4px rgba(0,0,0,0.86);
+  box-shadow: 6px 0px 2px -4px rgba(0,0,0,0.86);
+  a {
+    color: white;
+    &:hover {
+      color: #CCCCCC;
+    }
+  }
+  .logo {
+    a {
+      text-decoration: none;
+    }
+  }
+}
+.content {
+  .content__heading {
+    color: $secondary-color;
+    text-align: center;  
+  }
+  .content__main {
+    text-align: left;
+    margin: 20px;
+  }
+}
