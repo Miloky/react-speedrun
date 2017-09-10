@@ -5,7 +5,7 @@ import {
   Link,
   Switch,
 } from 'react-router-dom';
-
+import FaCheckSquare from 'react-icons/lib/fa/check-square';
 import {
   Home,
   BookTrading, FileMeta, ImageSearch, NightLife, PinterestClone,
@@ -21,47 +21,52 @@ const App = () => (
     <main className="container">
       <section className="row">
         <div className="col-xs-12 col-sm-4 col-md-3 sidebar">
-          <h2 className="logo"><Link to="/">React Speedrun</Link></h2>
-          <h3>Frontend</h3>
-          <ul>
-            <li><Link to="/frontend/calculator">Calculator</Link></li>
-            <li><Link to="/frontend/pomodoro">Pomodoro</Link></li>
-            <li><Link to="/frontend/quote">Quote</Link></li>
-            <li><Link to="/frontend/simon">Simon</Link></li>
-            <li><Link to="/frontend/tribute">Tribute</Link></li>
-            <li><Link to="/frontend/twitch">Twitch</Link></li>
-            <li><Link to="/frontend/weather">Weather</Link></li>
-            <li><Link to="/frontend/wiki">Wiki</Link></li>
-            <li><Link to="/frontend/tictactoe">TicTacToe</Link></li>
-          </ul>
-          <h3>Data Visualization</h3>
-          <ul>
-            <li><Link to="/datavis/barchart">BarChart</Link></li>
-            <li><Link to="/datavis/datamap">DataMap</Link></li>
-            <li><Link to="/datavis/forcegraph">ForceGraph</Link></li>
-            <li><Link to="/datavis/heatmap">HeatMap</Link></li>
-            <li><Link to="/datavis/leaderboard">LeaderBoard</Link></li>
-            <li><Link to="/datavis/life">Life</Link></li>
-            <li><Link to="/datavis/markdown">MarkDown</Link></li>
-            <li><Link to="/datavis/recipes">Recipes</Link></li>
-            <li><Link to="/datavis/roguelike">Roguelike</Link></li>
-            <li><Link to="/datavis/scatterplot">ScatterPlot</Link></li>
-          </ul>
-          <h3>Backend</h3>
-          <ul>
-            <li><Link to="/backend/booktrading">BookTrading</Link></li>
-            <li><Link to="/backend/filemeta">FileMeta</Link></li>
-            <li><Link to="/backend/imagesearch">ImageSearch</Link></li>
-            <li><Link to="/backend/nightlife">NightLife</Link></li>
-            <li><Link to="/backend/pinterestclone">PinterestClone</Link></li>
-            <li><Link to="/backend/requestheader">RequestHeader</Link></li>
-            <li><Link to="/backend/stockmarket">StockMarket</Link></li>
-            <li><Link to="/backend/timestamp">TimeStamp</Link></li>
-            <li><Link to="/backend/urlshrtener">UrlShortener</Link></li>
-            <li><Link to="/backend/voting">Voting</Link></li>
-          </ul>
-        </div>
+          <div className="sidebar__logo">
+            <h2><Link to="/">React Speedrun</Link></h2>
+          </div>
+          <div className="sidebar__nav">
 
+            <h3>Frontend</h3>
+            <ul>
+              <li><Link to="/frontend/calculator">Calculator</Link> - <FaCheckSquare /></li>
+              <li><Link to="/frontend/pomodoro">Pomodoro</Link></li>
+              <li><Link to="/frontend/quote">Quote</Link></li>
+              <li><Link to="/frontend/simon">Simon</Link></li>
+              <li><Link to="/frontend/tribute">Tribute</Link></li>
+              <li><Link to="/frontend/twitch">Twitch</Link></li>
+              <li><Link to="/frontend/weather">Weather</Link></li>
+              <li><Link to="/frontend/wiki">Wiki</Link></li>
+              <li><Link to="/frontend/tictactoe">TicTacToe</Link></li>
+            </ul>
+            <h3>Data Visualization</h3>
+            <ul>
+              <li><Link to="/datavis/barchart">BarChart</Link></li>
+              <li><Link to="/datavis/datamap">DataMap</Link></li>
+              <li><Link to="/datavis/forcegraph">ForceGraph</Link></li>
+              <li><Link to="/datavis/heatmap">HeatMap</Link></li>
+              <li><Link to="/datavis/leaderboard">LeaderBoard</Link></li>
+              <li><Link to="/datavis/life">Life</Link></li>
+              <li><Link to="/datavis/markdown">MarkDown</Link></li>
+              <li><Link to="/datavis/recipes">Recipes</Link></li>
+              <li><Link to="/datavis/roguelike">Roguelike</Link></li>
+              <li><Link to="/datavis/scatterplot">ScatterPlot</Link></li>
+            </ul>
+            <h3>Backend</h3>
+            <ul>
+              <li><Link to="/backend/booktrading">BookTrading</Link></li>
+              <li><Link to="/backend/filemeta">FileMeta</Link></li>
+              <li><Link to="/backend/imagesearch">ImageSearch</Link></li>
+              <li><Link to="/backend/nightlife">NightLife</Link></li>
+              <li><Link to="/backend/pinterestclone">PinterestClone</Link></li>
+              <li><Link to="/backend/requestheader">RequestHeader</Link></li>
+              <li><Link to="/backend/stockmarket">StockMarket</Link></li>
+              <li><Link to="/backend/timestamp">TimeStamp</Link></li>
+              <li><Link to="/backend/urlshrtener">UrlShortener</Link></li>
+              <li><Link to="/backend/voting">Voting</Link></li>
+            </ul>
+          </div>
+
+        </div>
         <div className="col-xs-12 col-sm-8 col-md-9 content">
           <Switch>
             <Route exact path="/" component={Home} />

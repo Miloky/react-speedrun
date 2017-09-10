@@ -199,10 +199,11 @@ button {
 //**
 // App Specific Styles
 //**
+body {
+  background: #E3E3E2;
+}
 .sidebar {
-  background: $primary-color;
   color: white;
-  padding: 20px;
   border-right: 1px #ccc;
   -webkit-box-shadow: 6px 0px 2px -4px rgba(0,0,0,0.86);
   -moz-box-shadow: 6px 0px 2px -4px rgba(0,0,0,0.86);
@@ -213,10 +214,20 @@ button {
       color: #CCCCCC;
     }
   }
-  .logo {
+  .sidebar__logo {
+    background: $secondary-color;
+    padding: 20px;
+    h1, h2, h3, h4 {
+      margin: 0;
+      padding: 0;
+    }
     a {
       text-decoration: none;
     }
+  }
+  .sidebar__nav {
+    padding: 20px;
+    background: $primary-color;
   }
 }
 .content {
