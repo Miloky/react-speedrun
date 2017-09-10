@@ -25,7 +25,9 @@ class Calculator extends Component {
         case '=':
           // eval is a shortcut here I wouldn't use if anything other than
           // a basic non-critical calculation for a demo
-          display = eval(display).toString();// eslint-disable-line no-eval
+          if (!display[display.length - 1].match(/[%/*+-.]/gi)) {
+            display = eval(display).toString();// eslint-disable-line no-eval
+          }
           if (display.length > 15) {
             display = display.slice(0, 14); // non-production quality kludge
           }
@@ -36,9 +38,7 @@ class Calculator extends Component {
         case '+':
         case '-':
         case '.':
-          if (['%', '/', '*', '+', '-', '.'].indexOf(lastKey) !== -1) {
-            // don't allow multiple non-numerics in a row
-          } else if (display.length < 14) {
+          if (display.length < 14 && !display[display.length - 1].match(/[%/*+-.]/gi)) {
             display += input;
           }
           break;
