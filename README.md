@@ -3,7 +3,7 @@ Speedrun of the FreeCodeCamp projects in React - 5 September through 5 October 2
 
 [![Build Status](https://travis-ci.org/P1xt/react-speedrun.svg?branch=master)](https://travis-ci.org/P1xt/react-speedrun)
 
-Live site: [here](https://p1xt.com/react-speedrun)
+Live site: [here](https://p1xt-react-speedrun.herokuapp.com
 
 Start date: 5 September 2017
 
