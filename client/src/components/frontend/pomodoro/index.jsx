@@ -82,11 +82,11 @@ class Pomodoro extends Component {
     return (
       <section>
         <header className="content__heading">
-          <h1>Pomodoro</h1>
+          <h1>Pomodoro Clock</h1>
         </header>
         <div className="pomodoro">
           <div className="pomodoro__heading">
-            Pomodoro Timer
+            Pomodoro Clock
           </div>
           <div className="">
             <h3 className="">{`${this.state.activity}`} - {this.displayRemainingTime()}</h3>
