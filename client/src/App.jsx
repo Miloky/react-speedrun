@@ -29,7 +29,7 @@ const App = () => (
             <h3>Frontend</h3>
             <ul>
               <li><Link to="/frontend/calculator">Calculator</Link> - <FaCheckSquare /></li>
-              <li><Link to="/frontend/pomodoro">Pomodoro</Link></li>
+              <li><Link to="/frontend/pomodoro">Pomodoro</Link> - <FaCheckSquare /></li>
               <li><Link to="/frontend/quote">Quote</Link></li>
               <li><Link to="/frontend/simon">Simon</Link></li>
               <li><Link to="/frontend/tribute">Tribute</Link></li>
