@@ -33,7 +33,7 @@ const App = () => (
               <li><Link to="/frontend/quote">Quote</Link> - <FaCheckSquare /></li>
               <li><Link to="/frontend/simon">Simon</Link></li>
               <li><Link to="/frontend/tribute">Tribute Page</Link> - <FaCheckSquare /></li>
-              <li><Link to="/frontend/twitch">Twitch</Link></li>
+              <li><Link to="/frontend/twitch">Twitch</Link> - <FaCheckSquare /></li>
               <li><Link to="/frontend/weather">Local Weather</Link> - <FaCheckSquare /></li>
               <li><Link to="/frontend/wiki">Wikipedia Viewer</Link> - <FaCheckSquare /></li>
               <li><Link to="/frontend/tictactoe">TicTacToe</Link></li>
