@@ -28,11 +28,11 @@ const App = () => (
 
             <h3>Frontend</h3>
             <ul>
-              <li><Link to="/frontend/calculator">Calculator</Link> - <FaCheckSquare /></li>
-              <li><Link to="/frontend/pomodoro">Pomodoro</Link> - <FaCheckSquare /></li>
+              <li><Link to="/frontend/calculator">JavaScript Calculator</Link> - <FaCheckSquare /></li>
+              <li><Link to="/frontend/pomodoro">Pomodoro Timer</Link> - <FaCheckSquare /></li>
               <li><Link to="/frontend/quote">Quote</Link> - <FaCheckSquare /></li>
               <li><Link to="/frontend/simon">Simon</Link></li>
-              <li><Link to="/frontend/tribute">Tribute</Link></li>
+              <li><Link to="/frontend/tribute">Tribute Page</Link> - <FaCheckSquare /></li>
               <li><Link to="/frontend/twitch">Twitch</Link></li>
               <li><Link to="/frontend/weather">Local Weather</Link> - <FaCheckSquare /></li>
               <li><Link to="/frontend/wiki">Wikipedia Viewer</Link> - <FaCheckSquare /></li>
