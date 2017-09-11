@@ -20,7 +20,7 @@ const App = () => (
   <HashRouter>
     <main className="container">
       <section className="row">
-        <div className="col-xs-12 col-sm-4 col-md-3 sidebar">
+        <div className="col-xs-12 col-sm-4  sidebar">
           <div className="sidebar__logo">
             <h2><Link to="/">React Speedrun</Link></h2>
           </div>
@@ -35,7 +35,7 @@ const App = () => (
               <li><Link to="/frontend/tribute">Tribute</Link></li>
               <li><Link to="/frontend/twitch">Twitch</Link></li>
               <li><Link to="/frontend/weather">Weather</Link></li>
-              <li><Link to="/frontend/wiki">Wiki</Link></li>
+              <li><Link to="/frontend/wiki">Wikipedia Viewer</Link> - <FaCheckSquare /></li>
               <li><Link to="/frontend/tictactoe">TicTacToe</Link></li>
             </ul>
             <h3>Data Visualization</h3>
@@ -67,7 +67,7 @@ const App = () => (
           </div>
 
         </div>
-        <div className="col-xs-12 col-sm-8 col-md-9 content">
+        <div className="col-xs-12 col-sm-8 content">
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/backend/booktrading" component={BookTrading} />
