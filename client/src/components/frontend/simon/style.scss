@@ -1,3 +1,4 @@
+
 .simon {
   position: relative;
   $game_size: 450px;
@@ -38,22 +39,30 @@
       width: 50%;
       height: 50%;
       float: left;
-    };
+      box-sizing: border-box;
 
+    };
+    .simon__button:focus {
+      outline-style:none;
+      border: 20px solid #cccccc;
+    }      
+    .simon__button--animate {
+      opacity: 0.6;
+    }
     .green {
-      background: green;
+      background: #049372;
       border-top-left-radius: 100%;
     }
     .red {
-      background: red;
+      background: #FD4E4E;
       border-bottom-left-radius: 100%;
     }
     .yellow {
-      background: yellow;
+      background: #F3F340;
       border-top-right-radius: 100%;
     }
     .blue {
-      background: blue;
+      background: #233E5B;
       border-bottom-right-radius: 100%;
     }
   }

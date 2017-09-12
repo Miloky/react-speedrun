@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './style.scss';
 import greenSound from '../../../assets/audio/simonGreen.mp3';
 import yellowSound from '../../../assets/audio/simonYellow.mp3';
@@ -31,8 +32,31 @@ class Simon extends Component {
     return result;
   }
 
-  playSound = (input) => () => {
-    switch (input) {
+  render() {
+    return (
+      <section>
+        <header className="content__heading">
+          <h1>Simon Game</h1>
+        </header>
+        <section className="simon">
+
+          <div className="simon__game">
+            <div className="simon__controls">
+              <button className="simon__controls__start">Start</button>
+            </div>
+            <SimonButton color="Green" />
+            <SimonButton color="Yellow" />
+            <SimonButton color="Red" />
+            <SimonButton color="Blue" />
+          </div>
+        </section>
+      </section>
+    );
+  }
+}
+const SimonButton = (props) => {
+  const playSound = () => {
+    switch (props.color) {
       case 'Green':
         soundGreen.play();
         break;
@@ -48,32 +72,38 @@ class Simon extends Component {
       default:
         break;
     }
-  }
-  playGreen() {
-    this.playSound('Green');
-  }
-  render() {
-    return (
-      <section>
-        <header className="content__heading">
-          <h1>Simon Game</h1>
-        </header>
-        <section className="simon">
-
-          <div className="simon__game">
-            <div className="simon__controls">
-              <button className="simon__controls__start">Start</button>
-            </div>
-            <div className="simon__button green" onClick={this.playSound('Green')} role="button" tabIndex={0} />
-            <div className="simon__button yellow" onClick={this.playSound('Yellow')} role="button" tabIndex={0} />
-            <div className="simon__button red" onClick={this.playSound('Red')} role="button" tabIndex={0} />
-            <div className="simon__button blue" onClick={this.playSound('Blue')} role="button" tabIndex={0} />
-          </div>
-        </section>
-      </section>
-    );
-  }
+  };
+  const selected = () => {
+    const toAnimate = document.getElementById(`simon__button--${props.color.toLowerCase()}`);
+    toAnimate.classList.add('simon__button--animate');
+    playSound();
+    setTimeout(() => {
+      toAnimate.classList.remove('simon__button--animate');
+    }, 500);
+  };
+  const keyPress = (event) => {
+    if (event.keyCode === 32 || event.keyCode === 13) {
+      event.preventDefault();
+      selected();
+    }
+  };
+  return (
+    <div
+      id={`simon__button--${props.color.toLowerCase()}`}
+      className={`simon__button ${props.color.toLowerCase()}`}
+      onClick={selected}
+      role="button"
+      aria-pressed="false"
+      onKeyDown={keyPress}
+      tabIndex={0}
+    />
+  );
 }
+SimonButton.propTypes = {
+  color: PropTypes.string.isRequired,
+};
 
-
+SimonButton.defaultProps = {
+  color: null,
+};
 export default Simon;
