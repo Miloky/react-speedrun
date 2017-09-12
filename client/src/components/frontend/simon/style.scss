@@ -1,0 +1,60 @@
+.simon {
+  position: relative;
+  $game_size: 450px;
+  $border_size: 20px;
+  width: $game_size;
+  height: $game_size;
+  background: #232323;
+  box-sizing: border-box;
+
+  .simon__game {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #454545;
+    border: $border_size solid #343434;
+    border-radius: 50%;
+    box-sizing: border-box;
+    .simon__controls {
+      border: $border_size solid #303030;
+      position: absolute;
+      left: 25%;
+      top: 25%;
+      width: 50%;
+      height: 50%;
+      background: #3E3E3E;
+      border-radius: 50%;
+      z-index: 1;
+      box-sizing: border-box;
+      .simon__controls__start {
+        width: 25%;
+        top: 50%;
+        left: 25%;
+      }
+    }
+    .simon__button {
+      width: 50%;
+      height: 50%;
+      float: left;
+    };
+
+    .green {
+      background: green;
+      border-top-left-radius: 100%;
+    }
+    .red {
+      background: red;
+      border-bottom-left-radius: 100%;
+    }
+    .yellow {
+      background: yellow;
+      border-top-right-radius: 100%;
+    }
+    .blue {
+      background: blue;
+      border-bottom-right-radius: 100%;
+    }
+  }
+}

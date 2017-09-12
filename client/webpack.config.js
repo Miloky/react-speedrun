@@ -61,6 +61,10 @@ module.exports = {
           limit: 10000,
         },
       },
+      {
+        test: /\.(aac|m4a|mp3|oga|ogg|wav)$/,
+        loaders: ['file-loader'],
+      },
     ],
   },
   resolve: {
